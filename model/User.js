@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema({
         enum: ["ADMIN", "MANAGER", "TEAM_MEMBER"],
         default: "TEAM_MEMBER",
     },
+    profileImage: { type: String },
     createdAt: { type: Date, default: Date.now },
 });
 
