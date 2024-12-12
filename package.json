@@ -1,18 +1,19 @@
 {
-  "name": "crm-projectbackend",
-  "version": "1.0.0",
-  "description": "crm project backend of anovas",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "kainin",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "mongoose": "^8.8.4",
-    "nodemon": "^3.1.7"
-  }
+    "name": "crm-projectbackend",
+    "version": "1.0.0",
+    "description": "crm project backend of anovas",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js"
+    },
+    "author": "kainin",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "mongoose": "^8.8.4",
+        "nodemon": "^3.1.7"
+    }
 }
