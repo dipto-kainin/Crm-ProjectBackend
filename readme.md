@@ -17,10 +17,10 @@
 | **Endpoint**                         | **Admin** | **Manager** | **Team Member** |
 | ------------------------------------ | --------- | ----------- | --------------- |
 | **Authentication**                   |           |             |                 |
-| `POST /api/auth/register`            | ✅        | ❌          | ❌              |
-| `POST /api/auth/login`               | ✅        | ✅          | ✅              |
-| `POST /api/auth/logout`              | ✅        | ✅          | ✅              |
-| `GET /api/auth/me`                   | ✅        | ✅          | ✅              |
+| `POST /api/v1/auth/register`         | ✅        | ❌          | ❌              |
+| `POST /api/v1/auth/login`            | ✅        | ✅          | ✅              |
+| `POST /api/v1/auth/logout`           | ✅        | ✅          | ✅              |
+| `GET /api/v1/auth/me`                | ✅        | ✅          | ✅              |
 | **Dashboard**                        |           |             |                 |
 | `GET /api/dashboard/overview`        | ✅        | ✅          | ❌              |
 | `GET /api/dashboard/graphs`          | ✅        | ✅          | ❌              |
