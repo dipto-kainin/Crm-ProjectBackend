@@ -25,3 +25,19 @@ export const isAuthenticated = expressAsyncHandler(async (req, res, next) => {
         throw new Error("Not authorized, no token");
     }
 });
+
+
+export const isAuthorized = (...roles) => expressAsyncHandler(async (req, res, next) => {
+    try {
+        const user = req.user;
+        if (!roles.includes(user.role || ""))
+            throw new Error("You're not allowed to access this resource");
+        next();
+    } catch (error) {
+        console.log('[AUTHORIZATION_ERROR]', error);
+        return res.status(400).json({
+            sucess: false,
+            message: `Unauthorized: ${error.message}`
+        });
+    }
+})

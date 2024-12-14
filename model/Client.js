@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const ClientSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -6,9 +6,9 @@ const ClientSchema = new mongoose.Schema({
     phone: { type: String },
     address: { type: String },
     company: { type: String },
-    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
     createdAt: { type: Date, default: Date.now },
     notes: { type: String },
-});
+}, { timestamps: true });
 
-module.exports = mongoose.model("Client", ClientSchema);
+export const Client = mongoose.model("Client", ClientSchema);

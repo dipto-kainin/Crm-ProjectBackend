@@ -46,7 +46,7 @@ export const registerUser = async (req, res) => {
                 throw new Error("Wrong provider");
         }
     } catch (error) {
-        console.log("[REGISTER_USER]", error);
+        console.log("[REGISTER_USER_ERROR]", error);
         return res.status().json({
             success: true,
             message: `Internal Server Error`,
@@ -98,7 +98,7 @@ export const verifyUser = async (req, res) => {
             user,
         });
     } catch (error) {
-        console.log("[REGISTER_USER]", error);
+        console.log("[VERIFY_USER_ERROR]", error);
         return res.status().json({
             success: true,
             message: `Internal Server Error`,
@@ -135,7 +135,7 @@ export const loginUser = async (req, res) => {
             message: `User Logged in successfully`,
         });
     } catch (error) {
-        console.log("[LOGIN_USER]", error);
+        console.log("[LOGIN_USER_ERROR]", error);
         return res.status().json({
             success: true,
             message: `Internal Server Error`,
@@ -150,7 +150,7 @@ export const logoutUser = async (req, res) => {
             message: `User Logged out successfully`,
         });
     } catch (error) {
-        console.log("[LOGOUT_USER]", error);
+        console.log("[LOGOUT_USER_ERROR]", error);
         return res.status().json({
             success: true,
             message: `Internal Server Error`,
@@ -164,7 +164,7 @@ export const getUserProfile = async (req, res) => {
             user: req.user,
         });
     } catch (error) {
-        console.log("[GET_USER_PROFILE]", error);
+        console.log("[GET_USER_PROFILE_ERROR]", error);
         return res.status().json({
             success: true,
             message: `Internal Server Error`,

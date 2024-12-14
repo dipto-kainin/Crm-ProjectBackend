@@ -1,10 +1,10 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const TaskSchema = new mongoose.Schema({
     title: { type: String, required: true },
     description: { type: String },
-    project: { type: mongoose.Schema.Types.ObjectId, ref: "Project" },
-    assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    project: { type: mongoose.Schema.Types.ObjectId, ref: "project" },
+    assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: "user" },  
     status: {
         type: String,
         enum: ["PENDING", "IN_PROGRESS", "COMPLETED"],
@@ -19,4 +19,4 @@ const TaskSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Task", TaskSchema);
+export const Task = mongoose.model("task", TaskSchema);
